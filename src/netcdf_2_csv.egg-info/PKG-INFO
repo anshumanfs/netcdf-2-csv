@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: netcdf-2-csv
 Version: 0.0.1
-Summary: A package to convert NetCDF files to CSV
-Home-page: https://github.com/pypa/sampleproject
+Summary: A Package to convert NetCDF files to CSV
+Home-page: https://github.com/anshuman61/netcdf-2-csv
 Author: Anshuman Nayak
 Author-email: contact@anshumann.in
 License: UNKNOWN
-Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Project-URL: Bug Tracker, https://github.com/anshuman61/netcdf-2-csv/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

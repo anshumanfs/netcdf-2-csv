@@ -1,2 +1,2 @@
 dist/
-!src/netcdf2csv
+src/netcdf_2_csv.egg-info/
