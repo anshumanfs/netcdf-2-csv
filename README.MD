@@ -7,13 +7,13 @@
 # Why `netcdf2csv` ?
 `netcdf2csv` is a opensource python package to convert NetCDF files to CSV format. This is mainly helpful for those who are working with weather data, GIS data etc.
 # Installation
-    pip install netcdf-2-csv
+    pip install netcdf2csv
 
 # Usages
 
 ## Convert entire NetCdf file directory to csv 
  
-    from netcdf-2-csv import convert_dir
+    from netcdf2csv import convert_dir
     
     convert_dir(netcdf_dir,csv_dir,cleaned_csv_dir='./',clean_choice=0)
     
@@ -31,7 +31,7 @@
 &nbsp;
 ## Convert a single NetCdf file to csv
 
-    from netcdf-2-csv import convert_dir
+    from netcdf2csv import convert_dir
     
     convert_file(filepath,csv_dir,cleaned_csv_dir,clean_choice=0)
 
