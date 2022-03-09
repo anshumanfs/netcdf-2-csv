@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: netcdf-2-csv
+Name: netcdf2csv
 Version: 0.0.1
 Summary: A Package to convert NetCDF files to CSV
 Home-page: https://github.com/anshuman61/netcdf-2-csv
