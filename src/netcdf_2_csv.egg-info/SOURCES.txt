@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/netcdf2csv/__init__.py
+src/netcdf2csv/main.py
+src/netcdf_2_csv.egg-info/PKG-INFO
+src/netcdf_2_csv.egg-info/SOURCES.txt
+src/netcdf_2_csv.egg-info/dependency_links.txt
+src/netcdf_2_csv.egg-info/top_level.txt
