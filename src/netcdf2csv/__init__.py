@@ -3,6 +3,7 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
+
 def convert_dir(netcdf_dir,csv_dir,cleaned_csv_dir='./',clean_choice=0):
     """
         Call this function to convert entire NetCDF directory to CSV
@@ -45,7 +46,7 @@ def convert_dir(netcdf_dir,csv_dir,cleaned_csv_dir='./',clean_choice=0):
         printProgressBar(i + 1, l, prefix = 'Progress:', suffix = 'Complete')
         ds = xr.open_dataset(os.path.join(netcdf_dir, filename))
         df = ds.to_dataframe()
-        df.to_csv(os.path.join(netcdf_dir,'uncleaned_'+ filename[:-3] + '.csv'))
+        df.to_csv(os.path.join(csv_dir,'uncleaned_'+ filename[:-3] + '.csv'))
         #print (filename + ' has been processed to csv and saved to :-',csv_dir +'uncleaned_'+ filename[:-3] + '.csv')
         if clean_choice == 1:
             data = pd.read_csv(os.path.join(csv_dir,'uncleaned_'+ filename[:-3] + '.csv'))

@@ -4,6 +4,8 @@
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
 -->
+# Why `netcdf2csv` ?
+`netcdf2csv` is a opensource python package to convert NetCDF files to CSV format. This is mainly helpful for those who are working with weather data, GIS data etc.
 # Installation
     pip install netcdf-2-csv
 
