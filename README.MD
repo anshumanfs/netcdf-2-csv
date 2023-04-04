@@ -31,7 +31,7 @@
 &nbsp;
 ## Convert a single NetCdf file to csv
 
-    from netcdf2csv import convert_dir
+    from netcdf2csv import convert_file
     
     convert_file(filepath,csv_dir,cleaned_csv_dir,clean_choice=0)
 
