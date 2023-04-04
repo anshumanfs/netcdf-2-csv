@@ -54,7 +54,7 @@ def convert_dir(netcdf_dir, csv_dir, cleaned_csv_dir='./', clean_choice=0, chunk
         printProgressBar(i + 1, l, prefix='Progress:', suffix='Complete')
         ds = xr.open_dataset(os.path.join(
             netcdf_dir, filename), chunks=chunks, engine=engine)
-        for i, chunk in enumerate(ds.chunks):
+        for i, chunk in enumerate(ds.chunk()):
             df = chunk.to_dataframe()
             chunk_flag = ''
             if chunks != -1:

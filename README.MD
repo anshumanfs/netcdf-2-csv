@@ -17,7 +17,7 @@
  
     from netcdf2csv import convert_dir
     
-    convert_dir(netcdf_dir,csv_dir,cleaned_csv_dir='./',clean_choice=0)
+    convert_dir(netcdf_dir,csv_dir,cleaned_csv_dir='./',clean_choice=0, chunks=-1, engine='netcdf4')
     
 
 
@@ -29,13 +29,16 @@
 
 * clean_choice = (0 -> if you don't need cleaned csv, 1 -> if you want cleaned csv output)
 
+* chunks = (int, dict, 'auto' or None, optional) – If chunks is provided, it is used to load the new dataset into dask arrays. chunks=-1 loads the dataset with dask using a single chunk for all arrays. chunks={} loads the dataset with dask using engine preferred chunks if exposed by the backend, otherwise with a single chunk for all arrays. In order to reproduce the default behavior of xr.open_zarr(...) use xr.open_dataset(..., engine='zarr', chunks={}). chunks='auto' will use dask auto chunking taking into account the engine preferred chunks. See dask chunking for more details. (optional) (default (if you don't specify) -> -1)
+
+* engine  ={"netcdf4", "scipy", "pydap", "h5netcdf", "pynio", "cfgrib", "pseudonetcdf", "zarr", None} (default  (if you don't specify)-> 'netcdf4') (optional)
 
 &nbsp;
 ## Convert a single NetCdf file to csv
 
     from netcdf2csv import convert_file
     
-    convert_file(filepath,csv_dir,cleaned_csv_dir,clean_choice=0)
+    convert_file(filepath,csv_dir,cleaned_csv_dir,clean_choice=0, chunks=-1, engine='netcdf4')
 
 * filepath = Full path of file
 
@@ -44,6 +47,10 @@
 * cleaned_csv_dir = Directory to output cleaned csv files (does not containing null values) (Optional)
 
 * clean_choice = (0 -> if you don't need cleaned csv, 1 -> if you want cleaned csv output)
+
+* chunks = (int, dict, 'auto' or None, optional) – If chunks is provided, it is used to load the new dataset into dask arrays. chunks=-1 loads the dataset with dask using a single chunk for all arrays. chunks={} loads the dataset with dask using engine preferred chunks if exposed by the backend, otherwise with a single chunk for all arrays. In order to reproduce the default behavior of xr.open_zarr(...) use xr.open_dataset(..., engine='zarr', chunks={}). chunks='auto' will use dask auto chunking taking into account the engine preferred chunks. See dask chunking for more details. (optional) (default (if you don't specify) -> -1)
+
+* engine  ={"netcdf4", "scipy", "pydap", "h5netcdf", "pynio", "cfgrib", "pseudonetcdf", "zarr", None} (default  (if you don't specify)-> 'netcdf4') (optional)
 
 
 # Donate
